@@ -1,0 +1,1993 @@
+#wrap {--groups: var(--unreal-1)}
+
+#notif_list {
+display: grid !important;
+font-size: 10px;
+}
+
+#notif_list li {
+padding: 5px;
+display: list-item !important;
+}
+
+#notif_list li:nth-of-type(odd):not(.unread,.see_all) {background: #000;}
+#notif_list .unread {background-color: var(--unreal-c3);}
+#notif_list li:not(:last-of-type) {border-bottom: var(--unreal-border)}
+#notif_list hr {display: none !important;}
+#notif_list li.see_all {text-align: center;padding: 12px 0;}
+
+#notif_list * {
+justify-content: unset;
+align-items: unset;
+align-content: unset;
+flex-wrap: nowrap;
+display: initial !important;
+}
+
+#notif_list .content {
+display: flex !important; /*sacar*/
+justify-content: space-between;
+align-items: center;
+gap:10px;
+}
+
+#notif_list .contentText a:hover {color:var(--unreal-c2)}
+
+#notif_list .delete {
+height: 20px;
+width: 20px;
+display: flex !important;
+justify-content: center;
+align-items: center;
+}
+
+#notif_list .delete:before {
+content: '×';
+background-color: var(--unreal-c4);
+padding: 3px 4px 4px 3px;
+border-radius: 50%;
+font-size: 12px;
+line-height: 8px;
+}
+
+#eor-noti_list {top:50px;padding: 10px;}
+
+.eor-mp_nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.eor-mp_nav span {
+    background: var(--unreal-gdt2);
+    border: var(--unreal-border);
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font: 700 12px var(--unreal-font1);
+    padding: 7px;
+    width: 150px;
+    height: 30px;
+    text-align: center;
+    color: var(--unreal-1);
+    font-style: italic;
+}
+
+.eor-mp_nav a {
+    color: var(--unreal-1)!important;
+    font-style: normal;
+}
+
+.eor-mp_page .postprofile{
+    flex-wrap: nowrap;
+    flex-direction: column;
+    gap: 40px;
+}
+
+#eor-mp_preview .postprofile {display: none;}
+#eor-mp_preview .postbody {border: var(--unreal-border)}
+
+.eor-mp_page .postprofile-username, .eor-mp_page .postprofile-contact {width: auto;}
+
+/* ////////////////////////////////////////// TABLILLAS ////////////////////////////////////////// */
+/* Tablilla base */
+.eor-base {--group-op: rgb(from var(--groups) r g b / 45%);margin: 20px auto;max-width: 600px;}
+.eor-base em {font-style: normal;}
+.eor-base br {display: none;}
+.eor-base main br {display: block}
+.eor-base main {padding: 20px;font-size: 14px;color: #bebebe;line-height: 18px;}
+.eor-base main::-webkit-scrollbar-thumb {background: var(--groups);}
+.eor-base main::-webkit-scrollbar-track {background: #444;}
+.eor-base main u {text-decoration-color: var(--groups);text-underline-offset: 3px;text-decoration-thickness: 2px;}
+
+/* Tablilla 1 */
+.eor-base.t1 {border: 2px solid var(--group-op); outline: 8px solid #1c1c1c;outline-offset: 5px;}
+.eor-base.t1 header {background: linear-gradient(40deg, var(--groups) 26%, #000 10%);height: 90px;margin: 6px;display: flex;flex-direction: column;justify-content: center;font-family: var(--unreal-font1);text-transform: uppercase;padding-top: 15px;box-sizing: border-box;padding-left: 20px;border: 5px solid #000;outline: 1px solid #222;}
+.eor-base.t1 header h4 {color: var(--groups);font-weight: 700;font-size: 35px;mix-blend-mode: difference;}
+.eor-base.t1 sub {font-weight: 300; font-size: 15px;letter-spacing: 1px;margin-top: 5px;display: inline-flex; gap:3px;}
+.eor-base.t1 sub i {font-size: 12px;padding-left: 17px;}
+.eor-base.t1 main {margin: 5px;background: #111;border-top: 1px solid #666;max-height: 400px;overflow-y: auto;}
+
+/* Tablilla 2 */
+.eor-base.t2 {width: 500px; background: linear-gradient(to top, var(--groups), var(--fondo3) 38%, var(--fondo3) 70%, var(--group-op));padding: 10px;border-top: 10px solid #222;}
+.eor-base.t2 header {position: relative;}
+.eor-base.t2 header:after {content: '';inset: 0;position: absolute;background: linear-gradient(to bottom, transparent, #11111180, var(--fondo3) 180px, var(--fondo3));}
+.eor-base.t2 header img {object-fit: cover;height: 180px;width: 500px;filter: grayscale(1)}
+.eor-base.t2 header h4 {width: 80%;text-align: center;font: 25px var(--unreal-font1);font-weight: 300;text-transform: uppercase;overflow: visible;position: relative;z-index: 1;line-height: 1.8rem;margin: 0 auto;color: #d1d1d1;margin-top: 10px;text-decoration: underline;text-decoration-color: var(--group-op);text-underline-offset: 8px;}
+.eor-base.t2 header h4:before {content: var(--icon);line-height: 70px;border-radius: 50%;position: absolute;font-size: 70px;left: 50%;transform: translateX(-50%);mix-blend-mode: lighten;top: -54px;font-family:'game-icons';background: linear-gradient(to top, var(--fondo3), var(--groups));background-clip: text;color: transparent;}
+.eor-base.t2 main {padding: 40px 20px 20px;background: var(--fondo3);}
+.eor-base.t2 sub {text-align: center;font-weight: 600;font-size: 10px;text-transform: uppercase;display: block;border-top: var(--unreal-border);padding-top: 10px;margin: 20px 0 -10px;}
+.eor-base.t2 sub i {font-size: 10px;color: var(--groups);}
+.eor-base.t2 sub i:not(:first-of-type) {padding-left: 20px;}
+
+/* Tablilla 3 */
+.eor-base.t3 {margin: 20px auto;width: 100%;position: relative;outline: 10px solid rgb(from var(--groups) r g b / .2);outline-offset: 5px;}
+.eor-base.t3:before {content:'';background: linear-gradient(20deg, #000, #000, var(--groups));right: 0;top: 0;bottom: 0;position: absolute;width: 120px;mix-blend-mode: multiply;}
+.eor-base.t3:after {content:'Echoes of Rebellion';font-size: 10px;writing-mode: vertical-lr;transform: rotate(180deg);position: absolute;height: max-content;bottom: 10px;right: 0;text-transform: uppercase;letter-spacing: 10px;color: #222;}
+.eor-base.t3 img {width: 120px;object-fit: cover;height: 500px;float: right;border-left: 1px solid #fff;box-sizing: border-box;}
+.eor-base.t3 header {background-color: #111;text-transform: uppercase;text-align: right;padding: 20px;margin-right: 120px;}
+.eor-base.t3 header h4 {font: 30px var(--unreal-font1);padding-right: 15px;font-weight: 700;position: relative;}
+.eor-base.t3 header h4:after {content:'';border-right: 10px solid var(--groups);height: 21px;position: absolute;padding-left: 5px;top: 9px;}
+.eor-base.t3 sub {font-size: 10px;}
+.eor-base.t3 sub i {font-size: 8px;color: var(--groups);padding-right: 3px;}
+.eor-base.t3 sub i:not(:first-of-type) {padding-left: 17px;}
+.eor-base.t3 main {width: calc(100% - 120px);box-sizing: border-box;padding-left: 5px;}
+
+/* Tablilla 4 */
+.eor-base.t4 {width: 450px;margin: 50px auto 20px;border: var(--unreal-border);outline: rgb(21, 21, 21) solid 10px;position: relative;padding-bottom: 10px;}
+.eor-base.t4 > i {padding: 10px;position: absolute;left: 50%;transform: translateX(-50%);top: -30px;font-size: 30px;background: var(--fondo3);border-radius: 50%;line-height: 30px;border: 1px solid var(--group-op);}
+.eor-base.t4 header {display: grid;justify-items: center;background: #181818;box-sizing: border-box;padding: 15px 10px 5px;text-transform: uppercase;}
+.eor-base.t4 h4 {font-size: 32px;font-weight: 300;padding: 25px 0 5px;color: var(--groups);font-family: var(--unreal-font1);}
+.eor-base.t4 span {color: #a5a5a5;letter-spacing: 1px;font-size: 10px;}
+.eor-base.t4 sub {display: block;text-align: center;text-transform: uppercase;font-size: 9px;padding: 5px;border-top: var(--unreal-border);border-bottom: var(--unreal-border);margin-bottom: 10px;font-weight: 600;}
+.eor-base.t4 sub i {padding-right: 3px;}
+.eor-base.t4 sub i:not(:first-of-type) {padding-left: 20px;}
+.eor-base.t4 main {padding: 0 10px 0 15px;height: 490px;overflow-y: auto;}
+
+/* Tablilla Adm. 1 */
+.eor-admin {--group-op: rgb(from var(--groups) r g b / 45%);border: var(--unreal-border);margin: 35px;outline: 10px solid #181818;}
+.eor-admin header {border-bottom: 8px solid var(--groups);padding: 40px;font-size: 30px;font-weight: 700;text-transform: uppercase;background: var(--unreal-3);font-family: var(--unreal-font1);text-align: center;position: relative;overflow: hidden;}
+.eor-admin header:before {content: attr(data-sub);position: absolute;inset: 0;display: flex;justify-content: center;align-items: center;font-family: var(--unreal-font4);font-size: 60px;mix-blend-mode: color-burn;z-index: 0;color: var(--groups);overflow: hidden;white-space: nowrap;}
+.eor-admin header span {position: relative;z-index: 2;}
+.eor-admin header span:before, .eor-admin header span:after {font-size: 40px;font-weight: 300;position: absolute;color: var(--groups);}
+.eor-admin header span::before {content:'[';left: -25px;}
+.eor-admin header span::after {content:']';right: -25px;}
+.eor-admin sub {padding: 13px 10px 10px;font-family: var(--unreal-font1);font-weight: 300;font-size: 17px;text-transform: uppercase;border-bottom: var(--unreal-border);text-align: center;display: block;letter-spacing: 1px;background-color: var(--unreal-2);}
+.eor-admin main {padding: 15px;font-size: 14px;line-height: 1.1rem;background: linear-gradient(-10deg,var(--fondo2) 45%, var(--group-op) 45%, var(--fondo1));}
+.eor-admin main > div {background: var(--unreal-3);padding: 30px;border: var(--unreal-border);color: #bebebe;line-height: 18px;}
+
+/* Tablilla Adm. 2 */
+.eor-admin.v2 h1 {text-align: center; display: flex;justify-content: center;align-items: center;height: 120px;font-weight: 600;text-transform: uppercase;font: 48px 'Impact', 'Arial Narrow', sans-serif;--sl: calc(50% - .5px), #0000 calc(50% + .5px);background: linear-gradient(22deg, var(--unreal-text) var(--sl)) text, linear-gradient(22deg, #000 var(--sl)), var(--unreal-gdt1);color: transparent;-webkit-text-stroke: var(--unreal-text) 1px;mix-blend-mode: exclusion;padding: 0 15px;margin: 0;letter-spacing: 2px;}
+.eor-admin.v2 {background-repeat: no-repeat !important; background-size:contain !important;}
+.eor-admin.v2 main {background: var(--unreal-2) !important}
+.eor-admin.v2 sub {border-top: var(--unreal-border)}
+
+/* Tablilla Narrador */
+.eor-admin.teller dl.codebox dt {background:linear-gradient(45deg,#181818,var(--groups))}
+.eor-admin.teller dl.codebox code::-webkit-scrollbar-thumb {background-color: var(--groups);}
+.eor-admin.teller dl.codebox code::-webkit-scrollbar-track {background-color: var(--groups);}
+
+/* /////////// Formatos Adm. ////////// */
+.eor-admin main sub {border-right: 5px solid rgba(173, 79, 79, 0.76);border-top: var(--unreal-border)}
+.eor-admin main i {color:var(--groups)}
+.eor-admin section::-webkit-scrollbar-thumb {background: #843c3cff;border: 5px solid #181818;}
+.eor-admin section::-webkit-scrollbar-track {background: #353535;border: 7px solid #181818;}
+.eor-admin section.scroll {overflow-y: auto;max-height: 300px;background: #181818;}
+.eor-admin section.mini {overflow-y: auto;height: 200px; width: 250px; background: #181818;box-sizing: border-box;}
+.eor-admin section.mini b4 {color: inherit}
+.eor-admin ul {margin: 0 10px 0 35px !important;}
+.eor-admin ul li {position: relative; list-style: none;}
+.eor-admin ul li:before {content:'\f105';font-family:'FontAwesome';color: var(--groups);left: -15px;position: absolute;font-size: 16px;}
+.eor-admin b2 {
+    color: var(--groups);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+    background: #222;
+    padding: 3px 8px 2px;
+    margin: 0 5px;
+    border-radius: 8px;
+}
+.eor-admin b2::before {
+    content: '\f101';
+    font-family: 'FontAwesome';
+    padding-right: 5px;
+    color: #c0c0c0;
+    font-size: 10px;
+    vertical-align: top;
+}
+
+.eor-admin b3 {
+    color: var(--groups);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.eor-admin ins {
+    background: #222;
+    max-width: 80%;
+    width: fit-content;
+    margin: 10px auto;
+    text-decoration: none;
+    display: block;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.eor-admin main u {text-decoration-color: var(--groups);text-underline-offset: 3px;text-decoration-thickness: 2px;}
+
+.eor-admin a:hover {background: var(--unreal-c2);}
+
+.eor-admin a {
+    color: #ddd !important;
+    background: #383838;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.eor-menu ol li {list-style-type: upper-roman;}
+
+/* rotar icon */
+
+i.rotar {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+i.rotar:before {rotate: 20deg;}
+
+
+/*menu horizontal*/
+/*<div class="eor-menu">
+<nav class="hz"><label for="hzm1"></label></nav>
+<input type="radio" name="hz-menu" id="hzm1"><section class="hz_menu"></section></div>*/
+
+.eor-menu br:not(section.hz_menu br) {display: none;}
+.hz_menu {display: none;}
+nav.hz {
+    display: flex;
+    justify-content: center;
+    gap:30px;
+    margin: 20px 0 30px;
+}
+nav.hz label, nav.hz a {
+    font: 20px var(--unreal-font1);
+    font-weight: 300;
+    text-align: center;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--unreal-text);
+}
+
+nav.hz a:hover {background-color: transparent}
+nav.hz a {background-color: transparent;}
+
+nav.hz label:hover i, nav.hz a:hover i {transform: scale(1.2);}
+
+nav.hz i {
+    display: block;
+    text-align: center;
+    position: relative;
+    font-size: 38px;
+    padding: 5px;
+    margin-bottom: -5px;
+    transition: transform .5s ease;
+}
+
+nav.hz i:before {
+    z-index: 3;
+    position: relative;
+}
+
+nav.hz i:after {
+    content: '';
+    position: absolute;
+    background: #181818;
+    width: 30px;
+    height: 30px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    z-index: 0;
+    border: 1px solid #2f2f2f;
+}
+
+nav.hz label i:hover:after, nav.hz a i:hover:after {border: var(--unreal-border);}
+
+input[name="hz-menu"] {display: none;}
+input#hzm1:checked + .hz_menu, input#hzm2:checked + .hz_menu, input#hzm3:checked + .hz_menu, input#hzm4:checked + .hz_menu, input#hzm5:checked + .hz_menu {display: block;}
+
+/* tablilla grupos */
+/* <div class="eor-grupo" style="--cg: #ad5050; --icon: '\EF99'"><img src="https://i.imgur.com/CNxoy8v.png"><input type="checkbox" name="eg1" id="eg1"><div class="eor-grupo_slide"><label for="eg1">Imperiales</label><div>TEXTO</div></div></div>
+*/
+
+
+.eor-grupo {
+    width: 530px;
+    height: 300px;
+    box-sizing: border-box;
+    position: relative;
+    border: 1px solid #333;
+    overflow: hidden;
+}
+
+.eor-grupo > br, .eor-menu span.resizebox {display: none;}
+
+.eor-grupo .eor-grupo_slide {
+    position: absolute;
+    background: linear-gradient(40deg, transparent, #181818 50%);
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: -473px;
+    transition: left .6s ease-out;
+}
+
+.eor-grupo img {
+    width: 528px;
+    height: 298px;
+    object-fit: cover;
+}
+
+.eor-grupo input {
+    display: none;
+}
+
+.eor-grupo_slide label {
+    float: right;
+    writing-mode: vertical-lr;
+    rotate: 180deg;
+    width: 55px;
+    text-align: left;
+    height: 100%;
+    font: 30px var(--unreal-font1);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding-top: 15px;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+    color: var(--cg);
+    border-left: 5px solid var(--cg);
+}
+
+.eor-grupo_slide label:before {
+    content: var(--icon);
+    font-family: 'game-icons';
+    font-size: 120px;
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    color: var(--unreal-transparent);
+    z-index: -1;
+}
+
+input#eg1:checked + .eor-grupo_slide, input#eg2:checked + .eor-grupo_slide, input#eg3:checked + .eor-grupo_slide, 
+input#eg4:checked + .eor-grupo_slide, input#eg5:checked + .eor-grupo_slide, input#eg6:checked + .eor-grupo_slide,
+input#eg7:checked + .eor-grupo_slide, input#eg8:checked + .eor-grupo_slide, input#eg9:checked + .eor-grupo_slide,
+input#eg10:checked + .eor-grupo_slide {
+    left:0;
+}
+
+.eor-grupo_slide > div {
+    margin-right: 55px;
+    background: linear-gradient(75deg, transparent 160px, #111 160px, #181818);
+    padding: 10px 10px 10px 170px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    font-size: 13px;
+}
+
+.eor-grupo_slide > div strong {color: var(--cg) !important}
+.eor-grupo_slide > div b3 {color: var(--cg) !important}
+.eor-grupo_slide > div ul li:before {color: #444 !important}
+.eor-grupo_slide > div ul {margin: 0 0 0 10px !important;}
+.eor-grupo_slide > div::-webkit-scrollbar-thumb {background: var(--cg);border: 5px solid #181818;}
+.eor-grupo_slide > div::-webkit-scrollbar-track {background: #353535;border: 7px solid #181818;}
+
+/* botón highlight */
+
+mark {
+    background: var(--unreal-gdt2);
+    border-radius: 12px;
+    padding: 20px 15px;
+    border: var(--unreal-border);
+    transition: .5s ease;
+}
+
+mark a {
+    background-color: transparent !important;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: var(--unreal-font1);
+    font-weight: 300;
+    transition: .5s ease;
+}
+
+mark:has(a:hover) {
+    background: var(--unreal-c1);
+}
+
+/* ///////// Usos generales /////////// */
+
+b4 {
+    color: var(--groups);
+    text-transform: uppercase;
+    font-size: 8.5pt;
+    font-weight: 600;
+}
+
+b4:before {
+    padding-right: 6px;
+    color: #444;
+    content: '\f105';
+    font-family: 'FontAwesome';
+    font-size: 13px;
+    vertical-align: baseline;
+}
+
+f1 {
+    font-family: var(--unreal-font1);
+    font-weight: 300;
+}
+
+h6 {font: 40px var(--unreal-font1);text-transform: uppercase;font-weight: 300;color: var(--unreal-text);width: fit-content;padding: 7px 10px 5px;margin: 0 auto;text-align: center;line-height: 26px;letter-spacing: 1px;position: relative;z-index: 1;}
+h6:before {content:'';width: calc(100% + 100px);position: absolute;top: 50%;left: 50%;transform: translateX(-50%);height: 2px;background: linear-gradient(60deg, var(--groups), var(--unreal-3));z-index: 0;border-top: 2px solid #000;}
+h5 {font: 22px var(--unreal-font1);font-weight: 300;text-decoration: underline;text-decoration-color: var(--groups);text-underline-offset: 4px;text-transform: uppercase;}
+
+.postbody hr {
+    height: 1px;
+    background: linear-gradient(to top right, #bebebe 10%, var(--groups) 25%, var(--groups) 65%, #bebebe 90%);
+    width: 60%;
+    border: 0px;
+    margin: 10px auto;
+    position: relative;
+    overflow: visible;
+    box-shadow: 0 0 8px var(--groups);
+}
+
+.postbody hr:before {
+    content: '\EE97';
+    font-family: 'game-icons';
+    position: absolute;
+    font-size: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -8px;
+    color: #bebebe;
+    text-shadow: 0 0 5px var(--groups);
+}
+
+/* registros FC */
+/*[b]Nombre Apellido[/b] → <a href="">Nombre Apellido</a>*/
+
+.eor-admin.reg section.scroll strong::before {
+    content: '\F2EF';
+    font-family: 'bootstrap-icons';
+    color: #888;
+    vertical-align: baseline;
+    font-size: 7px;
+    padding-right: 6px;
+}
+
+.eor-admin.reg section.scroll strong {
+    font-weight: 400;
+    color: var(--unreal-text) !important;
+    margin-left: 10px;
+    padding: 0 5px;
+    text-transform: uppercase;
+    font-size: 11px;
+}
+
+.eor-admin.reg section.scroll a, .eor-admin.reg section.mini a {
+    background-color: transparent;
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--unreal-c2) !important;
+    transition: background-color .5s ease;
+}
+
+.eor-admin.reg section.scroll a:hover, .eor-admin.reg section.mini a:hover {
+    color: var(--unreal-text) !important;
+    background-color: #444;
+}
+
+.eor-admin.reg section.scroll {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 1.3rem;
+}
+
+/* registros GROUP, raza */
+/*<a href="">Nombre Apellido</a>→ Explorador
+<a href="">Nombre Apellido</a> ←*/
+
+.eor-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.eor-admin.reg h5 {
+    text-align: center;
+    margin: 20px 0 10px;
+}
+
+.eor-admin.reg section.mini {
+    padding: 10px;
+    line-height: 1.3rem;
+    text-transform: uppercase;
+    font-size: 11px;
+    text-align: left;
+}
+
+/* /////// FICHA //////// */
+
+.eor-ficha {
+    width: 630px;
+    height: 700px;
+    background: linear-gradient(360deg, var(--groups) -850%, var(--unreal-0));
+    margin: 20px auto;
+    box-sizing: border-box;
+    position: relative;
+    border:1px solid #444;
+    overflow: hidden;
+}
+
+.eor-ficha br, .eor-ficha input {display: none;}
+.eor-ficha .text br {display: block;}
+.eor-ficha  * {box-sizing: border-box;}
+.eor-ficha li {list-style: none;}
+.eor-ficha b {
+    text-transform: uppercase;
+    font-size: 11px;
+    color: var(--groups)
+}
+
+input#ef-down:checked ~ div {top:0;}
+input#ef-center:checked ~ div {top: calc(-100% - 1px);}
+input#ef-up:checked ~ div {top: calc(-200% - 4px);}
+
+.eor-ficha > div {
+    position: absolute;
+    left:0; right:0;
+    transition: top .6s ease-out;
+    display: grid;
+    gap: 2px;
+}
+
+.eor-ficha_stat-inv div.lp div::-webkit-scrollbar-thumb, 
+.eor-ficha_stat-inv div.lg div::-webkit-scrollbar-thumb {background: var(--groups);border: 7px solid #111;}
+.eor-ficha_stat-inv div.lp div::-webkit-scrollbar-track, 
+.eor-ficha_stat-inv div.lg div::-webkit-scrollbar-track {background: #333; border-color: #111}
+
+.eor-ficha_stat-power p::-webkit-scrollbar-thumb {background: var(--groups);border: 7px solid #181818;}
+.eor-ficha_stat-power p::-webkit-scrollbar-track {background: #333; border-color: #181818}
+
+.eor-ficha_content > div::-webkit-scrollbar-thumb {background: var(--groups);border: 7px solid var(--unreal-3);}
+.eor-ficha_content > div::-webkit-scrollbar-track {background: #333;border: 7px solid var(--unreal-3);}
+
+.eor-ficha_stat {
+    position: relative;
+    display: flex;
+    width: 628px; height: 698px;
+}
+
+.eor-ficha_stat-left {
+    width: 243px;
+    border-right: 3px solid var(--groups)
+}
+
+.eor-ficha_stat-inv > * {
+    background: #181818;
+    display: flex;
+    height: 141px;
+}
+
+.eor-ficha_stat-inv i {
+    font-size: 30px;
+    padding: 20px;
+    border-right: 1px solid #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.eor-ficha_stat-inv i:after {
+    position: absolute;
+    content: '';
+    width: 60px;
+    height: 60px;
+    top: 50%; left:50%;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    border: 1px solid var(--groups);
+}
+
+.eor-ficha_stat-inv div.lp div, .eor-ficha_stat-inv div.lg div {
+    margin: 5px;
+    background: #111;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.eor-ficha_stat-inv > div {
+    border-bottom: 1px solid #444;
+}
+
+.eor-ficha_stat-inv p.text {
+    border-left: 5px solid #333;
+    padding-left: 3px;
+    margin: 10px 5px;
+    font-size: 10px;
+    hyphens: auto;
+}
+
+.eor-ficha_stat-stat {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    background: #444;
+    gap: 1px;
+    border: 1px solid #444;
+    margin: 5px !important;
+}
+
+.eor-ficha_stat-stat li {
+    background: #181818;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    font-size: 10px;
+    color: #b4b4b4;
+    font-weight: 700;
+}
+
+.eor-ficha_stat-stat b {
+    font: 30px Impact;
+    color: var(--groups);
+}
+
+.eor-ficha_stat-right {
+    width: 385px;
+    background: linear-gradient(10deg,transparent 150px, var(--groups) 150px, #181818 300px);
+}
+
+.eor-ficha_stat-right img {
+    width: 385px;
+    height: 448px;
+    filter: brightness(.6) grayscale(.8);
+    object-fit: cover;
+}
+
+.eor-ficha_stat-power {
+    margin: 10px;
+    border: 1px solid #444;
+    background-color: #181818;
+    height: 230px;
+    padding: 20px;
+    display: grid;
+}
+
+.eor-ficha_stat-power > div {
+    display: flex;
+    align-items: center;
+}
+
+.eor-ficha_stat-power i {
+    font-size: 50px;
+    padding-right: 20px;
+}
+
+.eor-ficha_stat-power p.text {
+    overflow-y: auto;
+    height: 85px;
+    font-size: 12px;
+    margin: 0;
+    flex:1;
+}
+
+.eor-ficha_stat-power div:last-of-type i {
+    order: 2;
+    padding: 0 0 0 20px;
+}
+
+.eor-ficha_stat-power div:last-of-type {
+    text-align: justify;
+    text-align-last: right;
+    border-top: 1px solid #444;
+    padding-top: 10px;
+    margin-top: 10px;
+}
+
+.eor-ficha_hist {
+    width: 628px; height: 450px;
+    position: relative;
+}
+
+.eor-ficha_content {
+    background: var(--unreal-3);
+    width:100%;
+    padding: 30px 20px 30px 30px;
+    height: 448px;
+    border-bottom:1px solid #444;
+}
+
+.eor-ficha_content > div {
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    counter-reset: index;
+    font-size: 14px;
+    padding-right:10px;
+    color: #bebebe;
+}
+
+.eor-ficha_content h4 {
+    counter-increment: index;
+    margin: 20px auto;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-align: center;
+    position: relative;
+    color: var(--unreal-text)
+}
+
+.eor-ficha_content h4:before {
+    content: counter(index, decimal-leading-zero) '.';
+    font-weight: 300;
+    font-size: 30px;
+    font-family: var(--unreal-font1);
+    display: block;
+    position: relative;
+    z-index: 3;
+    line-height: 30px;
+}
+
+.eor-ficha_content h4:after {
+    content: '';
+    position:absolute;
+    top: 12px;
+    left: calc(50% - 4px);
+    transform: translateX(-50%) rotate(-30deg);
+    border-top: 2px solid var(--groups);
+    width: 50px;
+    z-index: 1;
+}
+
+.eor-ficha dl.codebox {
+    padding: 10px 0 !important;
+}
+
+.eor-ficha dl.codebox dt {
+    margin: -10px 0 8px 0 !important;
+}
+
+.eor-ficha_basic {
+    margin: 10px !important;
+    border: 1px solid #444;
+    outline: 10px solid var(--unreal-2);
+    display: grid;
+    background: #444;
+    height: 230px;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1px;
+}
+
+.eor-ficha_basic li {
+    background: #181818;
+    text-align: center;
+    text-transform: uppercase;
+    font: 23px var(--unreal-font1);
+    display: grid;
+    align-content: center;
+    font-size: 23px;
+    font-family: var(--unreal-font1);
+    line-height: 30px;
+    font-weight: 300;
+}
+
+.eor-ficha_basic li:before {
+    content:attr(data-b);
+    font: 10px var(--unreal-font2);
+    font-weight: bold;
+    color: var(--groups)
+}
+
+.eor-ficha_face {
+    width: 588px; height: 658px;
+    background: linear-gradient(-22deg, var(--groups) 50%, #333 50%), var(--img);
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px;
+    outline: 20px solid var(--unreal-3);
+    border: var(--unreal-border);
+}
+
+.eor-ficha_titulo {
+    background: var(--unreal-0);
+    width: 100%;
+    text-align: center;
+    padding: 25px 10px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    border-top: var(--unreal-border);
+    border-bottom: var(--unreal-border);
+    opacity: 1;
+    transition: opacity 2s ease;
+}
+
+.eor-ficha_face:hover .eor-ficha_titulo {
+    opacity: .3;
+}
+
+.eor-ficha_titulo h1.efh {
+    font: 46px var(--unreal-font1);
+    z-index: 2;
+    position: inherit;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 0; margin: 0;
+}
+
+.eor-ficha_titulo h2.efh {
+    position:absolute;
+    z-index: 1;
+    top: calc(50% - 5px); left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 70px;
+    width: 100%;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0; padding: 0;
+    -webkit-text-fill-color: var(--groups);
+    opacity: .2;
+}
+
+.eor-ficha_titulo p.efh {
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-style: italic;
+    color: #999;
+    margin: 0;
+    line-height: normal;
+}
+
+.eor-ficha_face label {
+    writing-mode: vertical-lr;
+    background: #181818;
+    width: fit-content;
+    text-transform: uppercase;
+    font: 28px var(--unreal-font1);
+    font-weight: 300;
+    rotate: 180deg;
+    cursor: pointer;
+}
+
+.eor-ficha_face label[for="ef-down"] {
+    padding: 3px 8px 15px 3px;
+    align-self: flex-end;
+    border-top-right-radius: 15px;
+}
+
+.eor-ficha_face label[for="ef-down"]:before {
+    content: '\F148';
+    font: 20px 'bootstrap-icons';
+    padding: 10px 0;
+    color: #777;
+}
+
+.eor-ficha_face label[for="ef-up"] {
+    padding: 15px 8px 3px 3px;
+    border-bottom-left-radius: 15px;
+}
+
+.eor-ficha_face label[for="ef-up"]:after {
+    content: '\F128';
+    font: 20px 'bootstrap-icons';
+    padding: 10px 0;
+    color: #777;
+}
+
+.eor-ficha_stat label, .eor-ficha_hist label {
+    position: absolute;
+    top: 0;
+    z-index: 5;
+    width: 55px; height: 55px;
+    padding: 5px;
+}
+
+.eor-ficha_stat label {
+    background: linear-gradient(45deg, transparent 50%, #444 calc(50% + 1px),#444 calc(50% + 2px), #181818 calc(50% + 2px));
+    right: 0; 
+    text-align: right;
+}
+
+.eor-ficha_stat label i, .eor-ficha_hist label i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.eor-ficha_hist label {
+    background: linear-gradient(-45deg, transparent 50%, #444 calc(50% + 1px),#444 calc(50% + 2px), #181818 calc(50% + 2px));
+    left: 0;
+    text-align: left;
+}
+
+/* /////////////// Pertenencias ///////////////// */
+
+#eor-inv{
+    --group-op: rgb(from var(--groups) r g b / 30%);
+    width: 650px;
+    height: 500px;
+    outline: 10px solid #111;
+    border: var(--unreal-border);
+    position: relative;
+    margin: 40px;
+    display: flex;
+    background: linear-gradient(-22deg, #181818 220px, var(--group-op) 220px, transparent);
+    overflow: hidden;
+    color: #bebebe;
+}
+
+#eor-inv input, #eor-inv br {display: none;}
+#eor-inv .eor-inv_text::-webkit-scrollbar-track {border-color: #181818; background:#444}
+#eor-inv .eor-inv_text::-webkit-scrollbar-thumb {border-color: #181818; background:var(--groups);  border-width: 7px;}
+#eor-inv .eor-inv_crono .eor-inv_text::-webkit-scrollbar-track {border-color: #000;}
+#eor-inv .eor-inv_crono .eor-inv_text::-webkit-scrollbar-thumb {border-color: #000;}
+#eor-inv .eor-inv_skill .eor-inv_text::-webkit-scrollbar-track {border-color: #111;}
+#eor-inv .eor-inv_skill .eor-inv_text::-webkit-scrollbar-thumb {border-color: #111;}
+#eor-inv .eor-inv_p1a::-webkit-scrollbar-track {border-color: #181818; background:#444}
+#eor-inv .eor-inv_p1a::-webkit-scrollbar-thumb {border-color: #181818; background:var(--groups);  border-width: 7px;}
+
+.eor-inv_portal, .eor-inv_relas, .eor-inv_crono, .eor-inv_skill {
+    position:absolute;
+    width:438px;
+    height:500px;
+    box-sizing: border-box;
+    z-index:2;
+}
+
+.eor-inv_text {
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.eor-inv_menu {
+    display: flex;
+    position: relative;
+    z-index: 20;
+}
+
+.eor-inv_menu img {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(1);
+}
+
+.eor-inv_menu nav {
+    width: 60px;
+    display: grid;
+    border-left: var(--unreal-border);
+    border-right: var(--unreal-border);
+    gap: 1px;
+    background: #444;
+}
+
+.eor-inv_menu label {
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    cursor:pointer;
+    transition: color .5s ease, background-color .5s ease;
+}
+
+.eor-inv_menu label:hover {
+    background-color: #181818;
+}
+
+input#ei1:checked ~ .eor-inv_menu label[for="ei1"],
+input#ei2:checked ~ .eor-inv_menu label[for="ei2"],
+input#ei3:checked ~ .eor-inv_menu label[for="ei3"],
+input#ei4:checked ~ .eor-inv_menu label[for="ei4"] {color: var(--groups); background-color: #000}
+
+input#ei1:checked ~ .eor-inv_crono {top:0; z-index:3}
+input#ei2:checked ~ .eor-inv_relas {bottom:0; z-index:3}
+input#ei3:checked ~ .eor-inv_portal {right:0; z-index:3}
+input#ei4:checked ~ .eor-inv_skill {left:212px; z-index:3}
+
+.eor-inv_relas {
+    bottom: calc(100% + 2px);
+    right: 0;
+    transition: bottom 1s ease-in-out;
+    padding: 15px 5px 15px 10px;
+    background-color: #181818;
+    outline: var(--unreal-border);
+}
+
+.eor-inv_relas > div {
+    display: flex;
+    flex-wrap: wrap;
+    width:423px;
+    height:470px;
+    gap: 15px;
+    align-content: start;
+}
+
+.eor-inv_relas dl {
+    height: 140px;
+    width: 190px;
+    position: relative;
+    border: var(--unreal-border);
+    overflow: hidden;
+}
+
+.eor-inv_relas dl:hover dd {opacity: 1;}
+
+.eor-inv_relas dt:first-of-type {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #00000090;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    inset: 0;
+    z-index:1;
+}
+
+.eor-inv_relas span {
+    font: 24px var(--unreal-font1);
+    font-weight: 300;
+    text-transform: uppercase;
+    line-height: 20px;
+}
+
+.eor-inv_relas img {
+    width: 190px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.eor-inv_relas dd {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    overflow-y: auto;
+    background: var(--unreal-2);
+    padding: 10px 5px 10px 10px;
+    width: 175px;
+    height: 120px;
+    transition: opacity 1s ease;
+    hyphens: auto;
+    z-index: 2;
+    cursor: default;
+}
+
+.eor-inv_relas p {
+    text-transform: uppercase;
+    font-size: 10px !important;
+    margin-bottom: 0 !important;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.eor-inv_relas dd p {
+    font-size: 11px !important;
+    padding-bottom: 10px;
+}
+
+.eor-inv_relas dd br {display: block;}
+.eor-inv_relas dd::-webkit-scrollbar-thumb {background-color: var(--unreal-text); border-width: 7px;}
+.eor-inv_relas dd::-webkit-scrollbar-track {background-color: #444;}
+
+.eor-inv_crono {
+    top: calc(100% + 2px);
+    right: 0;
+    transition: top 1s ease-in-out;
+}
+
+.eor-inv_crono > div {
+    margin: 10px;
+    border: var(--unreal-border);
+    background: var(--unreal-2);
+    height: 478px;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+.eor-inv_crono h4 {
+    padding: 10px;
+    font:30px var(--unreal-font1);
+    font-weight: 700;
+    line-height: 30px;
+    background: #151515;
+}
+
+.eor-inv_crono dl {
+    display: grid;
+    grid-template-areas: 'a b' 'a c';
+    grid-template-columns: 50px auto;
+    margin: 20px 0;
+}
+
+.eor-inv_crono dl:before {
+    font-family: 'bootstrap-icons';
+    color: var(--groups);
+    grid-area: a;
+    place-self: center;
+    font-size: 20px;
+    background: #181818;
+    padding: 8px;
+    border-radius: 3px;
+}
+
+.eor-inv_crono dl[name="c"]::before {content:'\F47B'}
+.eor-inv_crono dl[name="a"]::before {content:'\F600'}
+
+.eor-inv_crono dt {
+    grid-area: b;
+    font-size: 20px;
+    font-weight: 300;
+    font-family: var(--unreal-font1);
+    line-height: 20px;
+}
+
+.eor-inv_crono dt a{color: var(--groups)}
+.eor-inv_crono dt a:hover{color: var(--unreal-text)}
+
+.eor-inv_crono dd {
+    grid-area: c;
+    font-size: 9px;
+    text-transform: uppercase;
+}
+
+.eor-inv_crono dd a{color: var(--unreal-text);font-size: inherit}
+.eor-inv_crono dd a:hover{font-weight: bold;}
+
+.eor-inv_skill {
+    top:0;
+    left: calc(100% + 2px);
+    transition: left 1s ease-in-out;
+    background: #111;
+    padding: 10px;
+}
+
+.eor-inv_skill > div {
+    height: 478px;
+    display: grid;
+    gap: 10px;
+}
+
+.eor-inv_skill > div > div {
+    margin-right: 5px;
+    border: var(--unreal-border);
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    background: linear-gradient(to bottom, #000 40px, transparent 40px);
+    align-content: start;
+}
+
+.eor-inv_skill nav {
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 10px;
+    padding: 10px;
+    gap: 20px;
+}
+
+.eor-inv_skill nav span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.eor-inv_skill nav i {
+    font-size: 15px;
+}
+
+.eor-inv_skill h4, .eor-inv_skill h3{
+    text-transform: uppercase;
+    font-family:  var(--unreal-font1);
+    line-height: 20px;
+    font-weight: 300;
+    margin: 0;
+    height:20px;
+}
+
+.eor-inv_skill h3{
+    padding: 10px;
+    align-self: center;
+    font-size: 25px;
+}
+
+.eor-inv_skill h4{
+    border-left:var(--unreal-border);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    min-width: 120px;
+    justify-content: space-between;
+}
+.eor-inv_skill div[role="pf"] h4:after{content: '\EE97'; color:plum}
+.eor-inv_skill div[role="pc"] h4:after{content: '\EB98'; color: burlywood}
+.eor-inv_skill div[role="c"] h4:after{content: '\E90F'; color:cadetblue}
+
+.eor-inv_skill h4:after {
+    font-family: 'game-icons';
+    font-weight: none;
+    font-size: 23px;
+    border-left: var(--unreal-border);
+    padding-left: 10px;
+    margin-left:10px;
+    line-height: 40px;
+}
+
+.eor-inv_skill p {
+    flex-grow:1;
+    border-top: var(--unreal-border);
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 0 !important;
+}
+
+.eor-inv_portal {
+    display: grid;
+    right: 440px;
+    top: 0;
+    transition: right 1s ease-in-out;
+    grid-template-rows: auto 120px auto;
+    outline: var(--unreal-border);
+}
+
+.eor-inv_p1 {
+    display: flex;
+    border: var(--unreal-border);
+    margin: 10px;
+    background: #181818;
+}
+
+.eor-inv_p1a {
+    margin: 10px;
+    padding-right: 10px;
+    height: 230px;
+    overflow-y: auto;
+    width: 250px;
+}
+
+.eor-inv_p1a br {display: block !important;}
+
+.eor-inv_p1b {
+    border-left: var(--unreal-border);
+    display: grid;
+    background-color: #444;
+    gap:1px;
+    width: 138px;
+    grid-template-rows: 25%;
+}
+
+.eor-inv_p1b > * {
+    background: #111;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    position: relative;
+}
+
+.eor-inv_p1b .dato {
+    text-transform: uppercase;
+    flex-direction: column;
+}
+
+.eor-inv_p1b span:first-of-type {
+    font: 20px var(--unreal-font1);
+    font-weight: 300;
+    line-height: 20px;
+    margin-top: 3px;
+}
+
+.eor-inv_p1b span:last-of-type {
+    font-size:10px;
+    color: var(--groups);
+    font-weight: bold;
+}
+
+.eor-inv_p1b a {
+    font-size: 45px;
+    padding: 5px;
+    color: #999 !important;
+}
+
+.eor-inv_p1b a:hover i {
+    animation: shake 1s ease infinite;
+    text-shadow: 0 0 5px var(--unreal-text);
+    color: #fff;
+}
+
+.eor-inv_title {
+    border-bottom: var(--unreal-border);
+    border-top: var(--unreal-border);
+    background: var(--unreal-2);
+    text-align: right;
+    display: grid;
+    align-content: center;
+    text-transform: uppercase;
+    padding-right: 20px;
+}
+
+.eor-inv_title t1 {
+    font: 45px var(--unreal-font1);
+    font-weight: 700;
+    color: var(--groups);
+}
+
+.eor-inv_title n {
+    font: 20px var(--unreal-font4);
+    color: #999;
+    margin-top: -15px;
+}
+
+.eor-inv_p2 nav {
+    display: grid;
+    grid-auto-flow: column;
+    background: #444;
+    gap:1px;
+    border-bottom: var(--unreal-border);
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.eor-inv_p2 nav a {
+    background: #181818;
+    text-align: center;
+    padding: 10px 5px;
+    color: var(--unreal-text);
+}
+
+.eor-inv_p2 nav a:hover {background: var(--group-op)}
+
+.eor-inv_p2 p {
+    font-size: 13px !important;
+    font-style: italic;
+    background-color: #181818;
+    padding: 10px;
+    margin-bottom: 0 !important;
+    overflow: hidden;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@keyframes shake {
+    0% {rotate: -45deg}
+    25% {rotate: 45deg}
+    50% {rotate: -45deg}
+    100% {rotate: 45deg}
+}
+
+/* ////// COMUNICADOR /////// */
+
+/* Cuerpo 1 */
+
+#eor-comlink .claro {
+    --fondo: #949292;
+    --borde: #3b342c;
+    --sombra: #111;
+    --radial: radial-gradient(ellipse at top, #245216, #19475f);
+    --claro: #bbb;
+    --shadow: inset -1px -1px 0px #777,inset 1px 1px 0px var(--claro);
+    --font: #4b4b4b;
+    --s-text: #ffffff95;
+    --rejilla: #8f877d;
+}
+
+#eor-comlink .dark {
+    --fondo: #2e2a2a;
+    --borde: #211d17;
+    --sombra: #000;
+    --radial: radial-gradient(ellipse at top, #1a3313, #192d38);
+    --claro: #6b6b6b;
+    --shadow: inset -1px -1px 0px #111,inset 1px 1px 0px #59534a;
+    --font: #665e51;
+    --s-text: #ffffff30;
+    --rejilla: #706a61;
+}
+
+#eor-comlink {
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#eor-comlink input {display: none;}
+
+#eor-comlink .comlink{
+    width: 300px;
+    height: 200px;
+    background-color: var(--fondo);
+    border-radius: 15px;
+    box-shadow: inset 0 0 10px var(--sombra);
+    position: relative;
+    border: 2px solid var(--borde);
+}
+
+#eor-comlink .pantalla{
+    position: absolute;
+    top: 20px; left:30px;
+    width: 215px;
+    height: 60px;
+    background: var(--radial), url('https://i.gifer.com/2Bap.gif');
+    background-blend-mode: lighten;
+    box-shadow: inset 1px 1px 10px var(--sombra), 0 0 5px var(--sombra);
+    border: 2px ridge var(--borde);
+    font: 13px 'Courier';
+    font-weight: bold;
+    padding: 10px;
+    color: var(--claro);
+    text-shadow: 0 0 5px var(--s-text);
+}
+
+#eor-comlink .pantalla > div {
+    overflow-y: auto;
+    overflow-x: hidden;
+    hyphens: auto;
+    height: 60px;
+    padding-right: 10px;
+}
+
+#eor-comlink .pantalla > div::-webkit-scrollbar-track {border:0;background-color: var(--borde);}
+#eor-comlink .pantalla > div::-webkit-scrollbar-thumb {border:0;background-color: var(--claro);}
+#eor-comlink .pantalla > div::-webkit-scrollbar {width: 1px;}
+
+#eor-comlink .name {
+    position: absolute;
+    bottom: 70px; left: 30px; width: 236px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 10px;
+    color: var(--font);
+    padding: 2px;
+    box-shadow: var(--shadow);
+}
+
+#eor-comlink .rejilla {
+    width: 150px;
+    height: 35px;
+    position: absolute;
+    bottom: 20px; left: 30px;
+    background-color: #444;
+    box-shadow: inset 1px 1px 10px var(--sombra), 0 0 5px var(--sombra);
+    border: 2px ridge var(--borde);
+    background: repeating-linear-gradient(var(--rejilla), var(--borde) 5px, var(--sombra) 5px);
+}
+
+#eor-comlink label {
+    position: absolute;
+    right: 35px;
+    height: 20px;
+    box-shadow: inset 2px 2px 0px #977171,inset -2px -2px 0px var(--sombra), 0 0 3px var(--sombra);
+    width: 60px;
+    border: 1px ridge var(--borde);
+    bottom: 30px;
+    background-color: #5e2727;
+    cursor: pointer;
+}
+
+#eor-comlink label:active {
+    box-shadow: inset -1px -1px 0px #977171,inset 2px 2px 0px #333, 0 0 3px var(--sombra);
+}
+
+#eor-comlink #luz1:checked ~ .mensaje {display: flex;}
+#eor-comlink #luz2:checked ~ .mensaje {display: flex;}
+
+#eor-comlink .mensaje {
+    display: none;
+    box-sizing: border-box;
+    justify-content: center;
+    padding: 70px 30px 0;
+    width: 600px;
+    height: 300px;
+    background: radial-gradient(circle at 50% -40%, transparent, var(--unreal-0) 85%), conic-gradient(from 180deg at 50% -30%, #295b7d 30deg, transparent 40deg, transparent 320deg, #295b7d 330deg);
+}
+
+#eor-comlink .codebox {
+width: 70%;
+border: none;
+background-color: transparent;
+}
+
+#eor-comlink .codebox dt {
+background: transparent;
+font-size: 0;
+border-bottom: 1px dotted #777;
+}
+
+#eor-comlink .codebox dt span {
+font-size: 15px;
+float: unset;
+font-weight: 300;
+text-align: center;
+display: block;
+}
+
+
+/* Cuerpo 2 */
+
+#eor-comlink2 {
+    margin: 40px auto;
+    box-sizing: border-box;
+    width: 450px;
+    border: var(--unreal-border);
+    outline: 10px solid #1a1a1a;
+    background-color: var(--unreal-2);
+}
+
+#eor-comlink2 > div {
+    display: flex;
+    border-bottom: 1px solid #222;
+    background-color: #000;
+    justify-content: flex-end;
+    padding: 15px;
+    gap: 15px;
+    align-items: center;
+}
+
+#eor-comlink2 .name {
+    text-align: right;
+    text-transform: uppercase;
+    font: 30px var(--unreal-font1);
+    line-height: 30px;
+    font-weight: 700;
+    color: var(--groups);
+}
+
+#eor-comlink2 .name::before{
+    content: 'Comunicador de';
+    display: block;
+    font: 10px var(--unreal-font2);
+    color: #999;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+#eor-comlink2 img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border: 5px solid transparent;
+    outline: 1px solid #222;
+}
+
+#eor-comlink2 .name span {
+    font: 15px var(--unreal-font4);
+    display: block;
+    margin-top: -3px;
+    color: #444;
+}
+
+#eor-comlink2 .msg {
+    padding: 20px;
+}
+
+#eor-comlink2 .code {
+    background-color: #111;
+    border-top: 1px solid #222;
+    padding: 10px;
+}
+
+#eor-comlink2 .code br {display: none;}
+
+#eor-comlink2 .codebox {
+width: 100%;
+border: none;
+background-color: transparent;
+}
+
+#eor-comlink2 .codebox dt {
+background: none;
+font-weight: 300;
+border-bottom: 1px dotted #444;
+}
+
+/* mensaje */
+
+.eor-comlink {
+    margin: 20px auto;
+    width: 450px;
+    min-height: 200px;
+    box-sizing: border-box;
+}
+
+.eor-comlink.cl1 {
+    border: var(--unreal-border);
+    outline: 10px solid #111;
+    background-color: var(--unreal-2);
+}
+
+.eor-comlink.cl2 {
+    box-shadow: 0 0 10px var(--groups);
+    background-color: #111;
+}
+
+.eor-comlink dl {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 10px 15px;
+    display: grid;
+    gap:10px;
+}
+
+.eor-comlink.cl1 dl{
+    background: var(--unreal-0);
+    border-bottom: 1px solid #222;
+}
+
+.eor-comlink.cl2 dl{
+    background: #000;
+    border-bottom: 1px solid rgb(from var(--groups) r g b / 50%);
+}
+
+.eor-comlink b {
+    color: var(--groups);
+    padding-right: 5px;
+}
+
+.eor-comlink .msg {
+    padding: 20px;
+}
+
+/* ///// Secciones para mini fichas ///// */
+
+/*
+<dl><dt style="--bg-img: url('URL')">Nombre Artículo</dt>
+<dd class="desc">DESC</dd>
+<dd class="xtra">[b]Modelos[/b]</dd></dl>
+
+*/
+
+.eor-minifile {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px;
+}
+
+.eor-minifile br:not(dd br) {display: none;}
+
+.eor-minifile dl {
+    box-sizing: border-box;
+    width: calc(50% - 20px);
+    margin: 10px;
+    border: 10px solid var(--unreal-0);
+    outline: var(--unreal-border);
+    font-size: 12px;
+}
+
+.eor-minifile dt {
+    background: linear-gradient(20deg, #000, transparent), var(--bg-img);
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    padding: 10px;
+    font: 20px var(--unreal-font1);
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: var(--unreal-border);
+    margin-bottom: 10px;
+    display: flex;
+    align-items: end;
+}
+
+.eor-minifile dt::before {
+    content: '»';
+    color: var(--unreal-c2);
+    padding-right: 5px;
+}
+
+.eor-minifile dd.desc {
+    padding: 0 10px;
+    height: 150px;
+    overflow-y: auto;
+    background: var(--unreal-0);
+}
+
+.eor-minifile dd::-webkit-scrollbar {width: 1px;}
+.eor-minifile dd::-webkit-scrollbar-track {border:0; background:#444}
+.eor-minifile dd::-webkit-scrollbar-thumb {border:0; background: var(--unreal-c2)}
+
+.eor-minifile dd.xtra {
+    margin-top: 10px;
+    border-top: var(--unreal-border);
+    background: #151515;
+    padding: 10px;
+    height: 80px;
+    font-size: 10px;
+    text-transform: uppercase;
+    hyphens: auto;
+    color: var(--unreal-text);
+    overflow-y: auto;
+}
+
+/* /////// Administración - Lista INV //////// */
+
+.eor-lista-inv {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.eor-lista-inv dl.codebox dt {
+background: #151515;
+font-weight: 300;
+font-size: 12px;
+border-bottom: 0;
+padding: 4px 8px;
+}
+
+.eor-lista-inv dl.codebox {
+border-radius: 0 0 5px 5px;
+border: 0;
+background-color: #222;
+}
+
+.eor-lista-inv .spoiler_content.hidden dl.codebox {background-color: #181818;}
+.eor-lista-inv .spoiler_content.hidden dl.codebox dt {border-bottom: var(--unreal-border); margin-bottom:3px !important;}
+.eor-lista-inv .spoiler_content.hidden dl.codebox code {width: 100%;}
+
+.eor-lista-inv .item {display: flex;}
+
+.eor-lista-inv .item img {
+box-sizing: border-box;
+border: 1px solid #333;
+height: 40px;
+width: 40px;
+padding: 3px;
+background-color: #000;
+}
+
+.eor-lista-inv .item i, #TAB4 .eor-i i {
+border: 1px solid #333;
+font-size: 34px;
+display: inline-block;
+line-height: 40px;
+height: 40px;
+width: 40px;
+background-color: #000;
+}
+.eor-lista-inv .item i {box-sizing: border-box;text-align: center;}
+.eor-lista-inv .item i.co, #TAB4 .eor-i i.co {color: steelblue}
+.eor-lista-inv .item i.pa, #TAB4 .eor-i i.pa {color: darkcyan}
+.eor-lista-inv .item i.de, #TAB4 .eor-i i.de {color: brown}
+
+/* //////// HOLOCRONIUM //////// */
+
+.eor-holo {
+    background: #222;
+    border: var(--unreal-border);
+    outline: 10px solid #181818;
+    margin: 12px auto;
+    max-width: 700px;
+}
+
+.eor-holo br {display: none;}
+
+.eor-holo header {
+    position: relative;
+    overflow: hidden;
+    background: #111;
+    text-transform: uppercase;
+    padding: 20px 20px 10px;
+    text-align: center;
+    font-family: var(--unreal-font1);
+    border-bottom: var(--unreal-border);
+}
+
+.eor-holo h1 {
+    font-weight: 700 !important;
+    font-size: 52px !important;
+    line-height: 52px;
+    position: relative;
+    z-index: 2;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.eor-holo h2 {
+    font-weight: 300 !important;
+    font-size: 30px !important;
+    line-height: 30px;
+    position: relative;
+    z-index: 2;
+    margin-top: -10px !important;
+    margin-bottom: 0 !important;
+    padding: 0 !important;
+}
+
+.eor-holo h2:after {
+    content: attr(data-name);
+    font: 300 10px / 1em var(--unreal-font1);
+    position: absolute;
+    background-color: var(--groups);
+    color: var(--groups);
+    -webkit-text-fill-color: var(--unreal-1);
+    padding: 3px 10px 0px;
+    border-radius: 6px;
+    letter-spacing: 3px;
+    left: 50%; top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.eor-holo h2:before {
+    content: '';
+    background: linear-gradient(to left, #111, var(--groups), #111);
+    width: 80%;
+    height: 1px;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translateX(-50%) translateY(-1px);
+}
+
+.eor-holo span {
+    position: absolute;
+    font-size: 140px;
+    top: 50%; left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #444;
+    z-index: 1;
+}
+
+.eor-holo main {
+    height: 750px;
+    overflow-y: auto;
+    margin: 10px;
+    overflow-x: hidden;
+}
+
+.eor-holo main::-webkit-scrollbar {width: 1px;}
+.eor-holo main::-webkit-scrollbar-thumb {background: var(--groups); border:0;}
+.eor-holo main::-webkit-scrollbar-track {background: #111;}
+
+.eor-holo * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.eor-holo ul {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+    width: 100%;
+    padding: 15px 20px 15px 15px;
+    list-style: none !important;
+    margin: 0 !important;
+}
+
+.eor-holo li {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding-bottom: 130%;
+    perspective: 1000px;
+}
+
+.eor-holo .holo {
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    perspective-origin: 50% 50%;
+    transform-style: preserve-3d;
+    transform-origin: top center;
+    will-change: transform;
+    transform: skewX(0.001deg);
+    transition: transform 0.35s ease-in-out;
+    border-radius: 6px;
+}
+
+.eor-holo .holo::after {
+    display: block;
+    content: "";
+    position: absolute;
+    z-index: 100;
+    top: 0; left: 0;
+    width: 100%;
+    height: 120%;
+    background: linear-gradient(226deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.4) 35%, rgba(255, 255, 255, 0.2) 42%, rgba(255, 255, 255, 0) 60%);
+    transform: translateY(-20%);
+    will-change: transform;
+    transition: transform 0.65s cubic-bezier(0.18, 0.9, 0.58, 1);
+}
+
+.eor-holo li:hover .holo {transform: rotateX(9deg) translateY(-1px)}
+.eor-holo li:hover .holo::after {transform: translateY(0%);}
+
+.eor-holo li::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 5%; left: 5%;
+    width: 90%;
+    height: 90%;
+    background: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 12px 12px rgba(0, 0, 0, 0.4);
+    will-change: opacity;
+    transform-origin: top center;
+    transform: skewX(0.001deg);
+    transition: transform 0.35s ease-in-out, opacity 0.5s ease-in-out;
+}
+
+.eor-holo li:hover::before {
+    opacity: 0.6;
+    transform: rotateX(7deg) translateY(-6px) scale(1.05);
+}
+
+.eor-holo .b {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 5px 5px 2px;
+    border-bottom: 1px solid #888;
+    font-size: 10px;
+    background: #11111130;
+}
+
+.eor-holo .holo.pl .b {background: #11111180;}
+
+.eor-holo b:first-child {font-size:12px;}
+
+dl.eor-rh {
+    display: inline-flex;
+    font-size: 10px;
+    font-weight: bold;
+    gap: 5px;
+    text-align: center;
+    margin: 2.5px;
+}
+
+dl.eor-rh dd {
+    width: 28px;
+    height: 40px;
+    border-radius: 2px;
+    background: #333;
+    border: 1px solid #555;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    line-height: 10px;
+}
+
+dl.eor-rh dd.b {background-color: var(--unreal-c3);}

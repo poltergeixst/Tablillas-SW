@@ -243,14 +243,21 @@ i.rotar:before {rotate: 20deg;}
 <nav class="hz"><label for="hzm1"></label></nav>
 <input type="radio" name="hz-menu" id="hzm1"><section class="hz_menu"></section></div>*/
 
-.eor-menu br:not(section.hz_menu br) {display: none;}
-.hz_menu {display: none;}
+.eor-menu br:not(section.hz_menu br) {
+    display: none;
+}
+
+.hz_menu {
+    display: none;
+}
+
 nav.hz {
     display: flex;
     justify-content: center;
     gap:30px;
     margin: 20px 0 30px;
 }
+
 nav.hz label, nav.hz a {
     font: 20px var(--unreal-font1);
     font-weight: 300;
@@ -260,10 +267,18 @@ nav.hz label, nav.hz a {
     color: var(--unreal-text);
 }
 
-nav.hz a:hover {background-color: transparent}
-nav.hz a {background-color: transparent;}
+nav.hz a:hover {
+    background-color: transparent;
+}
 
-nav.hz label:hover i, nav.hz a:hover i {transform: scale(1.2);}
+nav.hz a {
+    background-color: transparent;
+}
+
+nav.hz label:hover i, 
+nav.hz a:hover i {
+    transform: scale(1.2);
+}
 
 nav.hz i {
     display: block;
@@ -293,10 +308,40 @@ nav.hz i:after {
     border: 1px solid #2f2f2f;
 }
 
-nav.hz label i:hover:after, nav.hz a i:hover:after {border: var(--unreal-border);}
+nav.hz label i:hover:after, 
+nav.hz a i:hover:after {
+    border: var(--unreal-border);
+}
 
-input[name="hz-menu"] {display: none;}
-input#hzm1:checked + .hz_menu, input#hzm2:checked + .hz_menu, input#hzm3:checked + .hz_menu, input#hzm4:checked + .hz_menu, input#hzm5:checked + .hz_menu {display: block;}
+
+/* ==========================================
+   MODIFICACIÓN 1:
+   Antes solo ocultaba los radios hz-menu.
+   Añadimos hz-menu2 para que la segunda hoja
+   funcione como grupo independiente.
+========================================== */
+
+input[name="hz-menu"],
+input[name="hz-menu2"] {
+    display: none;
+}
+
+
+
+/* ==========================================
+   MODIFICACIÓN 2:
+   Se agregan hzm4 y hzm5.
+   Esto permite que las nuevas pestañas
+   muestren su contenido al estar seleccionadas.
+========================================== */
+
+input#hzm1:checked + .hz_menu,
+input#hzm2:checked + .hz_menu,
+input#hzm3:checked + .hz_menu,
+input#hzm4:checked + .hz_menu,
+input#hzm5:checked + .hz_menu {
+    display: block;
+}
 
 /* tablilla grupos */
 /* <div class="eor-grupo" style="--cg: #ad5050; --icon: '\EF99'"><img src="https://i.imgur.com/CNxoy8v.png"><input type="checkbox" name="eg1" id="eg1"><div class="eor-grupo_slide"><label for="eg1">Imperiales</label><div>TEXTO</div></div></div>
